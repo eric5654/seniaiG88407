@@ -9,7 +9,6 @@ print(type(nome))
 print(type(idade))
 print(type(altura))
 print(type(estudante))
-
 # Operadores matemáticos
 soma = 10 + 5
 diferenca = 8 - 7
