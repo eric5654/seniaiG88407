@@ -1,13 +1,10 @@
-idade = 20
-verdadeiro = True
-falso = False
-print (idade)
+idade = 18
+
 if idade >= 18:
-    print("Usuario é maior de idade", idade)
-    else:
-        print("USUARIO MENOR DE IDADE",idade)
-status = True
-if status:
-    print("Verdadeiro")
-else:
-        print("Falso")
+    print("Usuario é adulto: ", )
+   
+elif idade <- 18:      
+    print("USUARIO é Adolescente",)
+
+
+print(idade)
