@@ -1,14 +1,13 @@
-Usuarios = ("Jonatas","Isabela","Icaro")
-Senhas = ("6547","7890","3456")
+Usuarios = {
+         'Icaro': '3456',
+         'Isabela': '4657',
+         'Jonatas':  '5676'
+}
 
-Nome =  input("Informe o usuario:")
-Senhas = input("Informe a senha de usuario:")
+usuario = input("Informe seu Usuario: ")
+senha = input("Unforme a sua Senha")
 
-
-if Nome in Usuarios:
-
-elif Usuarios[Nome]==Senhas:
-    
-   print ("Login bem sucedido")
+if usuario in Usuarios and Usuarios[usuario] == senha:
+   print("Login bem sucedido! ")
 else:
-    print ("Nome de usuario e senhas invalidos")
+      print("Usuario não existe!")
