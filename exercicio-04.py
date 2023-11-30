@@ -1,19 +1,3 @@
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 Calculo_custo = float
 
 Distancia = float(input("Digite a distancia que você irá pecorrer:"))
