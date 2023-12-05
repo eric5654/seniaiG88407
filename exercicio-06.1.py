@@ -39,8 +39,14 @@ def exibir_pedido():
 def calcular_pedido():
     total = sum(Menu[item] for item in pedido)
     print(f"Total do pedido: R${total:.2f}")
-   
 
+def salvar_pedido():
+        with open('pedido.txt', 'w') as arquivo:
+            arquivo.write("Itens no pedido:\n")
+            for item in pedido:
+                arquivo.write(f"{item}\n")
+                total = sum(Menu[item] for item in pedido)
+                arquivo.write(f"\nTotal do pedido: R${total:.2f}")
 
 while True:
     print("[1] Exibir menu\n[2] Informar item\n[3] Remover item\n[4] Exibir pedido\n[5] Calcular pedido\n[6] Encerrar pedido")
@@ -56,24 +62,17 @@ while True:
         exibir_pedido()
     elif opcao == 5:
         calcular_pedido()
+        
     elif opcao == 6:
         print("Encerrando o pedido.")
+        salvar_pedido()
         break
     else:
         print("Opção inválida. Tente novamente.")
 
 
-def salvar_pedido():
-    with open('pedido.txt', 'w') as arquivo:
-        arquivo.write("Itens no pedido:\n")
-        for item in pedido:
-            arquivo.write(f"{item}\n")
-        total = sum(Menu[item] for item in pedido)
-        arquivo.write(f"\nTotal do pedido: R${total:.2f}")
-
-
-while True:
- if opcao == 6:
-       salvar_pedido()
-       print("Pedido salvo no arquivo 'pedido.txt'.")
-       break
+#while True:
+#    elif opcao == 6:
+#    salvar_pedido()
+#    print("Pedido salvo no arquivo 'pedido.txt'.")
+#    break
