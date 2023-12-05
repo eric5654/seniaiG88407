@@ -1,0 +1,4 @@
+Itens no pedido:
+Big Mac
+
+Total do pedido: R$20.00
