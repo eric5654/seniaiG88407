@@ -1,4 +1,4 @@
-enu = {'Big Mac': 20.00,
+Menu = {'Big Mac': 20.00,
         'Cheese Burger': 40.00,
         'Milk Shake': 30.00
         }
