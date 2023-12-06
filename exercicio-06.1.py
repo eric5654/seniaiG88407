@@ -65,7 +65,7 @@ while True:
         
     elif opcao == 6:
         print("Encerrando o pedido.")
-        salvar_pedido()
+        
         break
     else:
         print("Opção inválida. Tente novamente.")
