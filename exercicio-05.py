@@ -1,7 +1,7 @@
 Usuarios = {
-         'Icaro': '3456',
-         'Isabela': '4657',
-         'Jonatas':  '5676'
+         'Icaro': 3456,
+         'Isabela':4657,
+         'Jonatas':  5676
 }
 
 usuario = input("Informe seu Usuario: ")
