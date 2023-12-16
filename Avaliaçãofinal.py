@@ -1,55 +1,52 @@
-from ast import Break
-
-
 Conta = {
-         '500,00': '3456',
-         '360,00':'4657',
-         '900,00':  '5676'
+    '500,00': '3456',
+    '360,00': '4657',
+    '900,00': '5676'
 }
 conta = []
 
 saldo = input("Informe seu Saldo: ")
-senha = input("Unforme a sua Senha: ")
+senha = input("Informe a sua Senha: ")
 
-
-if saldo in     Conta and Conta[saldo] == senha:
-   print("Senha armazenada! ")
+if saldo in Conta and Conta[saldo] == senha:
+    print("Senha armazenada!")
 else:
-      print("Senha incorreta!" )
+    print("Senha incorreta!")
 
-while True != 4:
-          print("[1] Verificar_saldo\n[2] depositar_valor\n[3] retirar_valor\n[4]Sair :")
-def Verificar_saldo ():
-              print("Saldo: ")
-              for saldo in Conta:
-                  print(saldo)
-def depositar_valor ():
-        saldo = input("Informe a quantia : ")
-        if conta in saldo:
-         conta.append(saldo)
-         print(f"Saldo '{saldo}' dinheiro depositado.")
+while True:
+    print("[1] Verificar_saldo\n[2] depositar_valor\n[3] retirar_valor\n[4] Sair:")
+
+    opcao = input("Informe a opção desejada: ")
+
+    def Verificar_saldo():
+        print("Saldo:")
+        for saldo in Conta:
+            print(saldo)
+
+    def depositar_valor():
+        saldo_deposito = input("Informe a quantia: ")
+        print(f"Saldo '{saldo_deposito}' dinheiro depositado.")
+        
+
+    def retirar_valor():
+        saldo_retirada = input("Retire o valor: ")
+        if saldo_retirada in conta:
+            conta.remove(saldo_retirada)
+            print(f"Saldo '{saldo_retirada}' valor retirado.")
         else:
-                        print("Deposito não é possivel de efetuar.")
+            print("Valor insuficiente.")
 
-def retirar_valor ():
-    saldo = input("Retire o valor: ")
-    if saldo in conta:
-        conta.remove(saldo)
-        print(f"Saldo '{saldo}' valor a ser retirado.")
-    else:
-        print("Valor insuficiente")
-def sair():
-    
- opcao = str(input("Informe a opção desejada: "))
- if opcao == 1:
-      Verificar_saldo()
- elif opcao == 2:
-            depositar_valor  ()
- elif opcao == 3:
-                retirar_valor()
- elif opcao == 4:
+    def sair():
+        print("ENCERRADO")
+        exit()
+
+    if opcao == '1':
+        Verificar_saldo()
+    elif opcao == '2':
+        depositar_valor()
+    elif opcao == '3':
+        retirar_valor()
+    elif opcao == '4':
         sair()
-print("ENCERRADO")
-break
     else:
-    print("Sair." )
+        print("Opção inválida. Tente novamente.")
